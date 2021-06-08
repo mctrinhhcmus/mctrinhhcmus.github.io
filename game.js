@@ -38,9 +38,6 @@ $(document).ready(function () {
 
     container = document.getElementById("Spiel");
 
-    //alert("This page is in beta-testing and not related to other dibaku.
-    // de contents or services! Many functions are not implemented and not every bug is fixed yet.");
-
     //For smartphones:
     if (/Mobi/.test(navigator.userAgent)) {
         $(window).on("orientationchange", function (event) {
@@ -352,9 +349,11 @@ function leaveFullscreen() {
 }
 
 function startGameLoop() {
+
     if (/Mobi/.test(navigator.userAgent) && innerWidth < innerHeight) {
         $('#modal4').modal('open');
     } else {
+
         $('#modal5').modal('close');
         direction = "u";
         meshes[0].rotation.y = 0;
